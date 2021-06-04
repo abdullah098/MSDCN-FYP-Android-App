@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:padding="0dp"
+    tools:context=".home"
+    android:orientation="vertical"
+    tools:deviceIds="wear">
+
+    //upper welcome,name and pic
+    <RelativeLayout
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/t1"
+            android:text="Welcome Back"
+            android:textSize="30dp"
+            android:textColor="#fff"/>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_below="@+id/t1"
+            android:id="@+id/refresh"
+            android:src="@drawable/ic_baseline_refresh_24"
+            android:text="Refresh"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/About"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/profile"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+    //Total Revenue
+    <LinearLayout
+        android:layout_width="385dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Revenue"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:paddingLeft="40dp"
+            android:paddingTop="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$123"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"
+            android:id="@+id/Total_Revenue"/>
+
+
+    </LinearLayout>
+
+    //Total No of Sale
+    <LinearLayout
+        android:layout_width="385dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card_view"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Sale No"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:paddingLeft="40dp"
+            android:paddingTop="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$123"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"
+            android:id="@+id/Total_NSale"/>
+
+
+    </LinearLayout>
+
+
+    //Today Sale card AND Today Rrev (2 cards)
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp">
+
+        //Today Sale
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="112dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#ff5d9e"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/coin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="$100"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:id="@+id/Today_Revenue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Today Revenue"
+                    android:textColor="#fff"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        //Total Sale no
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="111dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#ff5d9e"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/transfer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="500"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:id="@+id/Today_Sale"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Today Sale No"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>>
+
+    //Today Revenue
+    <!--
+    <LinearLayout
+        android:layout_width="385dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today Revenue"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:paddingLeft="40dp"
+            android:paddingTop="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$123"
+            android:textSize="35dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"/>
+
+
+    </LinearLayout>  -->
+
+    //2 cards (Sale and Transfer)
+    <!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp">
+
+        //sale card
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ff5d9e"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/coin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sale"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_marginTop="8dp"/>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        //Transfer Card
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ff5d9e"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/transfer"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transfer"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_marginTop="8dp"/>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>   -->
+
+    //medicine inventory
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INVENTORY"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#516b9e"
+            android:letterSpacing="0.02"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:textSize="25dp"
+            android:textColor="#d06d88bd"
+            android:gravity="end"
+            android:layout_marginRight="16dp"
+            />
+
+
+    </LinearLayout>   -->
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/Toast_btn"-->
+<!--        android:text="Toast"/>-->
+    <Button
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_logout"
+        android:layout_gravity="center"
+        android:text="Logout"
+        android:textSize="25dp"/>
+
+
+
+
+</LinearLayout>
